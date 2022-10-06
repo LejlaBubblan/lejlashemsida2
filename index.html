@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>webbside1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+
+<body class="space">
+    <header> Layout </header>
+    <nav>
+        <label for="menucheckbox" id="menuicon"></label>
+        <input type="checkbox" name="menucheckbox" id="menucheckbox">
+        <ul>
+            <li><a href="index.html" class="thispage"> Sida 1 </a> </li>
+            <li><a href="sida2.html"> Sida 2 </a> </li>
+            <li><a href="sida3.html"> Sida 3 </a> </li>
+        </ul>
+    </nav>
+
+    <section class="text1">
+        <h1>Layout med grid</h1>
+        <p>
+            Grid-template-columns, Egenskapen grid-template-columns anger antalet (och bredden) av kolumner i en
+            rutnätslayout.
+            Värdena är en blankstegs separerad lista, där varje värde anger storleken på respektive kolumn.
+            Grid-template-rows, Egenskapen grid-template-rows anger antalet (och höjderna)
+            på raderna i en rutnätslayout. </p>
+        <p>
+            Värdena är en blankstegs separerad lista, där varje värde anger höjden på respektive rad.
+            Alltså i princip samma sak som grid-template-columns, fast skillnaden är då att det är för raderna istället.
+            Grid-template-areas, grid-template-areas anger områden inom rutnät layouten. </p>
+    </section>
+
+    <div class="text2">
+        <h1>Media query</h1>
+        <p>Det är en egenskap som möjliggör att kunna designa t.ex. en webbsida med anpassad layout för olika viewports.
+            Med andra ord att man kan använda sig av olika klienter och innehållet och layouten på webbsidan anpassas
+            snyggt. </p>
+    </div>
+
+    <div class="rosabild">
+        <img src="/image/background.jpg3.gif" alt="hej">
+    </div>
+
+    <div class="media">
+        <img src="/image/media.webp" alt="media1">
+    </div>
+
 </body>
+
 </html>

@@ -1,0 +1,334 @@
+@charset "UTF-8";
+
+.space {
+    background-image: url(/image/background\ 2.jpg);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+
+}
+
+body {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: min-content min-content auto auto;
+    grid-template-areas:
+        ". header ."
+        "nav  nav   nav"
+        "text1 img1 img1"
+        "text2 img2 img2";
+
+    grid-gap: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+header {
+    grid-area: header;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(233, 109, 128, 0.342);
+    font-size: 50px;
+    width: 100%;
+    border: 2px inset black;
+    border-radius: 3em 1em;
+    box-shadow: 1px 1px 15px 3px gold;
+}
+
+nav {
+    grid-area: nav;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    font-size: x-large;
+}
+
+nav a:link,
+nav a:visited {
+    background-color: lightpink;
+    color: black;
+}
+
+nav a:hover {
+    transition: all 1s;
+    width: 300px;
+    background:
+        linear-gradient(to right,
+            rgb(249, 252, 91),
+            rgb(228, 150, 204),
+            rgba(244, 199, 248, 0.966),
+            rgb(228, 150, 204),
+            rgb(249, 252, 91));
+}
+
+nav li {
+    display: inline-block;
+    border: 3px outset gold;
+    box-shadow: 1px 1px 15px 3px rgb(193, 173, 61);
+}
+
+.thispage {
+    text-decoration: underline 2px;
+    background: linear-gradient(rgb(228, 150, 204),
+            rgb(249, 252, 91));
+}
+
+.text1 {
+    grid-area: text1;
+    padding: 5%;
+    display: block;
+}
+
+.text2 {
+    grid-area: text2;
+    padding: 5%;
+}
+
+.rosabild {
+    grid-area: img1;
+}
+
+.rosabild img {
+    width: 40%;
+    border: 1px solid rgb(156, 152, 152);
+}
+
+.himmel {
+    grid-area: img2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.oskarshamn img {
+    width: 40%;
+}
+
+.navigation {
+    grid-area: img1;
+}
+
+.media {
+    grid-area: img2;
+}
+
+.navigation img {
+    width: 50%;
+    border: 2px solid black;
+}
+
+.media img {
+    width: 40%;
+    border: 2px solid black;
+}
+
+.users {
+    grid-area: img1;
+}
+.users img {
+    width: 50%;
+    border-radius: 6rem;
+    border: 3px solid grey;
+}
+
+.krav {
+    grid-area: img2;
+}
+
+.krav img {
+    width: 40%;
+    
+}
+
+#menuicon,
+#menucheckbox {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content min-content auto auto min-content min-content;
+        grid-template-areas:
+            "header   header"
+            "nav      nav"
+            "text1    text1"
+            "img1     img1"
+            "text2    text2"
+            "img2     img2";
+    }
+
+    header {
+        width: auto;
+
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content min-content auto min-content auto min-content;
+        grid-template-areas:
+            "header   header"
+            ".     nav   ."
+            "text1    text1"
+            "img1     img1"
+            "text2    text2"
+            "img2     img2";
+    }
+
+    nav li {
+        display: block;
+    }
+
+    header {
+        width: auto;
+        font-size: 2rem;
+    }
+
+
+    .text1 {
+        display: block;
+        background-color: rgba(226, 43, 192, 0.13);
+        border: 2px solid rgba(0, 0, 0, 0.34);
+        border-radius: 1em 1em;
+        
+    }
+
+    .text2 {
+        display: block;
+        background-color: rgba(226, 43, 192, 0.13);
+        border: 2px solid rgba(0, 0, 0, 0.34);
+        border-radius: 1em 1em;
+        padding: 10px;
+        margin-block-end: auto;
+    }
+
+    .rosabild {
+        width: 100%;
+    }
+
+    #menuicon {
+        background-image: url('image/flower.webp');
+        background-color: rgba(241, 158, 158, 0.747);
+        width: 90px;
+        height: 90px;
+        background-size: cover;
+        display: inline-block;
+        cursor: pointer;
+        border: 2px solid rgb(111, 69, 69);
+        border-radius: 3em;
+    }
+
+    #menucheckbox~ul {
+        display: none;
+    }
+
+    #menucheckbox:checked~ul {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        width: min-content;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: min-content min-content auto min-content auto min-content;
+        grid-template-areas:
+            "header"
+            "nav"
+            "text1"
+            "img1"
+            "text2"
+            "img2";
+    }
+
+    header {
+        width: 90%;
+        font-size: xx-large;
+    }
+
+    #menuicon {
+        background-image: url('image/flower.webp');
+        background-color: rgba(241, 158, 158, 0.747);
+        width: 90px;
+        height: 90px;
+        background-size: cover;
+        display: inline-block;
+        cursor: pointer;
+        border: 2px solid rgb(111, 69, 69);
+        border-radius: 3em;
+    }
+
+    #menucheckbox~ul {
+        display: none;
+    }
+
+    #menucheckbox:checked~ul {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        width: min-content;
+    }
+
+
+    .media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .text1 {
+        display: block;
+        background-color: rgba(226, 43, 192, 0.13);
+        border: 2px solid rgba(0, 0, 0, 0.34);
+        border-radius: 1em 1em;
+        
+    }
+
+    .text2 {
+        display: block;
+        background-color: rgba(226, 43, 192, 0.13);
+        border: 2px solid rgba(0, 0, 0, 0.34);
+        border-radius: 1em 1em;
+        padding: 10px;
+        margin-block-end: auto;
+    }
+
+    #nav1 {
+        position: relative;
+        transition: all 1s;
+    }
+
+    #nav1:hover {
+        width: 350px;
+        transition: all 1s;
+    }
+}
