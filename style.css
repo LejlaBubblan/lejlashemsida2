@@ -328,7 +328,6 @@ nav li {
     }
 
     #nav1:hover {
-        width: 350px;
-        transition: all 1s;
+        transform: scale(2,2);
     }
 }
